@@ -9,8 +9,6 @@ include "dbconnection.php";
 							<li class="active"><a href="index.php">Guest</a></li>
 							<li><a href="terrain.php">Terrain</a></li>
 							<li><a href="racing.php">Racing</a></li>
-							<li><a href="somo.php">Somo</a></li>
-							<li><a href="autonome.php">Autonome</a></li>
 						</ul>
 						
 					</nav>
@@ -18,32 +16,32 @@ include "dbconnection.php";
 
 <!-- Featured Post -->
 	
-		<header class="major" style="margin-bottom:-30px;">
+		<header class="major" >
 			<span class="date"><h2>Invités</h2></span>
 		</header>
 		<div id="wrapper" style="border-top:none;padding-top: 1rem;">
-			<form method="post" onload="remove()">
+			<form method="post">
 				<div class="row gtr-uniform">
 					<div class="col-6 col-12-xsmall">
 						<h4>Nom :</h4>
-						<input type="text" name="demo-nom" id="demo-nom" value="" placeholder="Nom" require/>
+						<input type="text" name="demo-nom" id="demo-nom" value="" placeholder="Nom" />
 					</div>
 					<div class="col-6 col-12-xsmall">
 						<h4>Prénom :</h4>
-						<input type="text" name="demo-prenom" id="demo-prenom" value="" placeholder="Prénom" require/>
+						<input type="text" name="demo-prenom" id="demo-prenom" value="" placeholder="Prénom" />
 					</div>
 
 					<div class="col-6 col-12-xsmall">
 						<h4>Téléhone : </h4>
-						<input type="text" name="demo-telephone" id="demo-telephone" value="" placeholder="Téléphone" require/>
+						<input type="text" name="demo-telephone" id="demo-telephone" value="" placeholder="Téléphone" />
 					</div>
 					<div class="col-6 col-12-xsmall">
 						<h4>Email : </h4>
-						<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" require/>
+						<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
 					</div>
 					<div class="col-6 col-12-xsmall">
 						<h4>Etablissement</h4>
-						<input type="text" name="demo-etablissement" id="demo-name" value="" placeholder="Etablissement" require/>
+						<input type="text" name="demo-etablissement" id="demo-name" value="" placeholder="Etablissement" />
 					</div>
 					<!-- Break -->
 					<div class="col-12">
@@ -71,14 +69,9 @@ include "dbconnection.php";
 
                     if($conn->query($sql)===TRUE)
                     {
-						?>
-                        <div id="toasts" style="border-top:none;"><div class="toast green" > Vous êtes enregistré </div></div>
-						<?php
+                        echo "ok";
                     }else{
-                        echo '<div id="toasts" style="border-top:none;"><div class="toast red" onload="setTimeout(()=>{
-							this.remove();
-						},3000);
-						">Vérifier les champs</div></div>';
+                        echo "<h2>Vérifier les champs </h2>" . $txt1 . "</h2>";
                         echo "Error: ". $sql . "<br>" . $conn->error;
                     }
                 }
@@ -86,7 +79,7 @@ include "dbconnection.php";
 </div>
 				<!-- Copyright -->
 					<div id="copyright">
-					<ul><li>&copy; Microsoft Polytechnique Club</li></ul>
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -96,14 +89,6 @@ include "dbconnection.php";
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-				<script>
-					function remove(){
-						const toast = document.querySelector('.toast');
-						setTimeout(()=>{
-							toast.remove();
-						},3000)
-					}
-					remove()
-				</script>
+
 	</body>
 </html>
