@@ -9,6 +9,8 @@ include "dbconnection.php";
 							<li><a href="index.php">Guest</a></li>
 							<li  class="active"><a href="terrain.php">Terrain</a></li>
 							<li><a href="racing.php">Racing</a></li>
+							<li><a href="somo.php">Somo</a></li>
+							<li><a href="autonome.php">Autonome</a></li>
 						</ul>
 					</nav>
 				<!-- Main -->
@@ -26,20 +28,13 @@ include "dbconnection.php";
 					
 					</div>
 					<div class="col-6 col-12-xsmall">
-						<h4>Email utilisateur :</h4>
-						<input type="email" name="demo-useremail" id="demo-useremail" value="" placeholder="Email Utilisateur" />
-					</div>
-					<div class="col-6 col-12-xsmall">
 						<h4>Nom du robot :</h4>
-						<input type="text" name="demo-robotname" id="demo-robotname" value="" placeholder="Robot" />
+						<input type="text" name="demo-robotname" id="demo-robotname" value="" placeholder="Robot" require/>
 					</div>
 
 					<div class="col-6 col-12-xsmall">
 						<h4>Etablissement : </h4>
-						<input type="text" name="demo-etablissement" id="demo-etablissement" value="" placeholder="Etablissement" />
-					</div>
-					<div class="col-6 col-12-xsmall">
-						<input type="hidden" />
+						<input type="text" name="demo-etablissement" id="demo-etablissement" value="" placeholder="Etablissement" require/>
 					</div>
 					<div class="col-12">
 						<br>
@@ -48,15 +43,15 @@ include "dbconnection.php";
 					
 					<div class="col-6 col-12-xsmall">
 						<h4>Nom et prénom chef d'équipe : </h4>
-						<input type="text" name="demo-leaderfullname" id="demo-leaderfullname" value="" placeholder="Chef d'équipe" />
+						<input type="text" name="demo-leaderfullname" id="demo-leaderfullname" value="" placeholder="Chef d'équipe" require/>
 					</div>
 					<div class="col-6 col-12-xsmall">
 						<h4>Email chef d'équipe : </h4>
-						<input type="email" name="demo-leaderemail" id="demo-leaderemail" value="" placeholder="Email chef d'équipe" />
+						<input type="email" name="demo-leaderemail" id="demo-leaderemail" value="" placeholder="Email chef d'équipe" require/>
 					</div>
 					<div class="col-6 col-12-xsmall">
 						<h4>Téléphone chef d'équipe : </h4>
-						<input type="text" name="demo-leaderphone" id="demo-leaderphone" value="" placeholder="Téléphone chef d'équipe" />
+						<input type="text" name="demo-leaderphone" id="demo-leaderphone" value="" placeholder="Téléphone chef d'équipe" require/>
 					</div>
 					<div class="col-6 col-12-xsmall">
 						<input type="hidden" />
@@ -148,7 +143,7 @@ include "dbconnection.php";
 	
 				<!-- Copyright -->
 				<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+						<ul><li>&copy; Microsoft Polytechnique Club</li></ul>
 					</div>
 
 		<!-- Scripts -->
